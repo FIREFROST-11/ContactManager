@@ -3,12 +3,12 @@ using ContactManager.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-// dotnet aspnet-codegenerator razorpage -m Contact -dc ApplicationDbContext -outDir Pages\Contacts --referenceScriptLibraries
+
 namespace ContactManager.Data
 {
     public static class SeedData
     {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 
         #region snippet_Initialize
         public static async Task Initialize(IServiceProvider serviceProvider, string testUserPw)
         {

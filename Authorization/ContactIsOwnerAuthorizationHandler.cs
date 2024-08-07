@@ -27,7 +27,7 @@ namespace ContactManager.Authorization
                 return Task.CompletedTask;
             }
 
-            // If not asking for CRUD permission, return.
+            
 
             if (requirement.Name != Constants.CreateOperationName &&
                 requirement.Name != Constants.ReadOperationName   &&

@@ -1,4 +1,4 @@
-#define DEFAULT // ALT DEFAULT
+#define DEFAULT
 #if NEVER
 #elif DEFAULT
 using Microsoft.AspNetCore.Identity;
@@ -7,7 +7,6 @@ using ContactManager.Data;
 using Microsoft.AspNetCore.Authorization;
 using ContactManager.Authorization;
 
-// snippet3 used in next define
 #region snippet4  
 #region snippet2
 #region snippet
@@ -34,7 +33,7 @@ builder.Services.AddAuthorization(options =>
 });
 #endregion
 
-// Authorization handlers.
+
 builder.Services.AddScoped<IAuthorizationHandler,
                       ContactIsOwnerAuthorizationHandler>();
 
@@ -54,6 +53,7 @@ using (var scope = app.Services.CreateScope())
     // requires using Microsoft.Extensions.Configuration;
     // Set password with the Secret Manager tool.
     // dotnet user-secrets set SeedUserPW <pw>
+    //dotnet user-secrets set SeedUserPW "YourStrongPassword123!" --project "C:\Users\HP\OneDrive\Desktop\ContactManager.sln"
 
     var testUserPw = builder.Configuration.GetValue<string>("SeedUserPW");
 
